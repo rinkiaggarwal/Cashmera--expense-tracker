@@ -1,7 +1,7 @@
 import { useState, useMemo, useEffect } from "react";
 import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Legend } from "recharts";
 
-/* ─── CONSTANTS ─────────────────────────────────────────── */
+
 const CATEGORIES = ["Food","Transport","Shopping","Entertainment","Health","Utilities","Other"];
 const CAT_COLORS = { Food:"#22c55e", Transport:"#4ade80", Shopping:"#86efac", Entertainment:"#bbf7d0", Health:"#16a34a", Utilities:"#15803d", Other:"#166534" };
 const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
@@ -28,7 +28,7 @@ const LS = {
   set: (k, v)  => { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
 };
 
-/* ─── SVG ICON SYSTEM ───────────────────────────────────── */
+
 function Icon({ name, size=18, color="currentColor", strokeWidth=1.5 }) {
   const s = { width:size, height:size, display:"block", flexShrink:0 };
   const p = { stroke:color, strokeWidth, fill:"none", strokeLinecap:"round", strokeLinejoin:"round" };
@@ -71,7 +71,6 @@ function Icon({ name, size=18, color="currentColor", strokeWidth=1.5 }) {
 
 const CAT_ICON = { Food:"food", Transport:"transport", Shopping:"shopping", Entertainment:"entertainment", Health:"health", Utilities:"utilities", Other:"other" };
 
-/* ─── CHART TOOLTIP ─────────────────────────────────────── */
 function ChartTip({ active, payload }) {
   if (!active || !payload?.length) return null;
   return (
@@ -122,11 +121,9 @@ const CSS = `
   }
 `;
 
-/* ═══════════════════════════════════════════════════════════
-   ROOT — handles auth + localStorage persistence
-═══════════════════════════════════════════════════════════ */
+
 export default function Cashmera() {
-  // Load persisted state from localStorage on first mount
+
   const [users,   setUsersState]   = useState(() => LS.get("cashmera_users", []));
   const [allExp,  setAllExpState]  = useState(() => LS.get("cashmera_expenses", {}));
   const [session, setSession]      = useState(() => LS.get("cashmera_session", null));
@@ -136,9 +133,9 @@ export default function Cashmera() {
   const [showPw, setShowPw]  = useState(false);
   const [showCPw, setShowCPw] = useState(false);
 
-  // Persist users whenever they change
+
   const setUsers = v => { setUsersState(v); LS.set("cashmera_users", v); };
-  // Persist all expenses whenever they change
+ 
   const setAllExp = fn => setAllExpState(prev => {
     const next = typeof fn === "function" ? fn(prev) : fn;
     LS.set("cashmera_expenses", next);
@@ -175,7 +172,7 @@ export default function Cashmera() {
     setAf({ name:"", username:"", password:"", confirm:"" });
   }
 
-  /* ═════════ AUTH SCREEN ═════════ */
+ 
   if (screen === "login" || screen === "signup") {
     const isLogin = screen === "login";
     return (
@@ -301,7 +298,7 @@ export default function Cashmera() {
   return <App current={current} expenses={expenses} setExpenses={setExpenses} logout={logout} />;
 }
 
-/* ─── AUTH FIELD ─────────────────────────────────────────── */
+//AUTH FIELD 
 function AuthField({ label, icon, type="text", value, onChange, placeholder, right }) {
   return (
     <div>
@@ -316,9 +313,7 @@ function AuthField({ label, icon, type="text", value, onChange, placeholder, rig
   );
 }
 
-/* ═══════════════════════════════════════════════════════════
-   MAIN APP
-═══════════════════════════════════════════════════════════ */
+//app
 function App({ current, expenses, setExpenses, logout }) {
   const [tab, setTab]         = useState("dashboard");
   const [showForm, setShowForm] = useState(false);
