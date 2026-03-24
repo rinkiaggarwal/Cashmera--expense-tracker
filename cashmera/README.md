@@ -1,70 +1,111 @@
-# Getting Started with Create React App
+# Cashmera
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Cashmera** is a modern expense tracking and personal finance dashboard built with React. It allows users to manage expenses, visualise spending patterns and gain financial insights through an intuitive and responsive interface.
+<img width="576" height="645" alt="Screenshot 2026-03-25 at 1 04 37 AM" src="https://github.com/user-attachments/assets/62890d18-26f7-41aa-9166-7655a0503ef0" />
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Overview
 
-### `npm start`
+Cashmera is a modern expense tracking and personal finance dashboard built using React. It enables users to efficiently manage their daily expenses, visualise spending patterns and gain meaningful financial insights through an intuitive and responsive interface.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The application is designed as a lightweight, frontend-only solution with no backend dependency. All data is securely stored in the browser using localStorage, ensuring fast performance and complete user privacy.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Cashmera combines clean UI design with real-time analytics, allowing users to track transactions, analyze category-wise spending and monitor monthly trends using interactive charts.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tech Stack
 
-### `npm run build`
+- **Frontend:** React (useState, useEffect, useMemo)
+- **Data Visualization:** Recharts (Pie Chart, Bar Chart)
+- **Styling:** Custom CSS (no external UI frameworks)
+- **State Management:** React Local State
+- **Storage:** Browser localStorage
+- **Icons:** Custom SVG Icon System
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Authentication
+- Local login and signup system
+- Session persistence using localStorage
 
-### `npm run eject`
+### Expense Management
+- Add, edit and delete expenses
+- Categorize transactions
+- Date-based tracking
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Data Visualization
+- Pie chart for category-wise spending
+- Bar chart for monthly analysis
+- Interactive charts using Recharts
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Dashboard Analytics
+- Total spending
+- Number of transactions
+- Top spending category
+- Average spending per transaction
+- Monthly summary breakdown
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Filters
+- Filter by category
+- Filter by month
+- Real-time updates
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Guide Mode
+- Preloaded sample dataset
+- Helps demonstrate app functionality
 
-## Learn More
+### Persistence
+- Data stored in browser localStorage
+- No backend required
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### UI/UX
+- Fully responsive layout
+- Dark theme interface
+- Custom SVG icon system
+- Smooth animations and transitions
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Tech Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Frontend:** React (Hooks)
+- **Charts:** Recharts
+- **Styling:** Custom CSS
+- **State Management:** React state
+- **Storage:** localStorage
+- **Icons:** Custom SVG
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Screenshots
+### Authentication
 
-### Making a Progressive Web App
+<img width="1441" height="837" alt="Screenshot 2026-03-25 at 1 02 43 AM" src="https://github.com/user-attachments/assets/44778634-0f8a-4338-80d6-42a64007dcc5" />
+<img width="1452" height="842" alt="Screenshot 2026-03-25 at 1 03 05 AM" src="https://github.com/user-attachments/assets/4a084ab3-871a-4544-955c-1c9dbc02fbec" />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Dashboard
+<img width="1010" height="620" alt="Screenshot 2026-03-25 at 1 02 01 AM" src="https://github.com/user-attachments/assets/6522733f-2d0a-4cdd-b938-61f2049b8182" />
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Charts
+<img width="926" height="290" alt="Screenshot 2026-03-25 at 12 55 38 AM" src="https://github.com/user-attachments/assets/d3731df8-5036-4439-8249-96082b4d8a34" />
+<img width="969" height="325" alt="Screenshot 2026-03-25 at 1 01 31 AM" src="https://github.com/user-attachments/assets/d5a79f77-4ea4-4866-80a4-cf386553f9b1" />
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Expense List
+<img width="958" height="697" alt="Screenshot 2026-03-25 at 12 55 05 AM" src="https://github.com/user-attachments/assets/3b791295-34e3-48f4-89f3-ba51a2d45e2f" />
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## Installation
+
+```bash
+git clone https://github.com/rinkiaggarwal/cashmera.git
+cd cashmera
+npm install
+npm run dev
